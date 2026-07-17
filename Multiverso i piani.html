@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/marzo/Downloads/multiverso-piani_1.html -->
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Multiverso — Piani e abbonamenti | Gianmarco Marzotto</title>
+<meta name="description" content="I piani del Multiverso: la community dove Gianmarco Marzotto segue i mercati ogni giorno. Live, analisi macro, formazione e confronto. Scegli il tuo accesso.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Multiverso i piani_files/css2" rel="stylesheet">
+<!-- ============================================================================
+  DA COMPLETARE (Gianmarco):
+  - Ogni piano ha NOME, PREZZO e PERIODO come placeholder -> sostituisci col reale.
+  - Ogni bottone piano ha un commento "PAGAMENTO:" -> incolla lì il link al checkout
+    (Whop, Stripe, ecc.) del rispettivo abbonamento.
+  - Se i piani sono 2 o 4 invece di 3, aggiungi/togli una .plan (colonne responsive).
+  ============================================================================ -->
+<style>
+  :root{
+    --ink:#12100E; --ink-2:#1A1714; --ink-3:#242019; --hair:#332C23;
+    --bone:#F1ECE3; --bone-dim:#D2CABC; --taupe:#9C9482;
+    --brass:#C8A96A; --brass-dim:#8C7645; --oxblood:#96574A;
+    --maxw:1120px; --pad:clamp(1.25rem,5vw,2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--bone-dim);font-family:'Instrument Sans',system-ui,sans-serif;font-size:clamp(1rem,1.05vw,1.1rem);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--brass);color:var(--ink)}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--bone);font-weight:420;line-height:1.06;letter-spacing:-0.015em}
+  em{font-style:italic;color:var(--brass)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .measure{max-width:62ch}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--brass);display:inline-block;margin-bottom:1.4rem}
+
+  header.bar{position:sticky;top:0;z-index:50;background:rgba(18,16,14,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+  .bar-inner{max-width:var(--maxw);margin:0 auto;padding:0.9rem var(--pad);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .mark{font-family:'JetBrains Mono',monospace;font-size:0.8rem;letter-spacing:0.14em;color:var(--bone);text-transform:uppercase}
+  .mark span{color:var(--brass)}
+  .bar-back{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--taupe);transition:color .2s}
+  .bar-back:hover{color:var(--bone)}
+
+  .hero{position:relative;padding:clamp(3.5rem,9vw,6.5rem) 0 clamp(2rem,5vw,3.5rem);overflow:hidden;border-bottom:1px solid var(--hair)}
+  .hero-wave{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.22}
+  .hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(130% 100% at 20% 45%,rgba(18,16,14,.9) 0%,rgba(18,16,14,.6) 45%,rgba(18,16,14,0) 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.8rem);max-width:14ch;margin-bottom:1.4rem}
+  .hero .lede{font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--bone);max-width:54ch;line-height:1.5}
+  .hero .lede strong{color:var(--brass);font-weight:600}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.7rem;background:var(--brass);color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;padding:1rem 1.6rem;border-radius:2px;border:1px solid var(--brass);transition:transform .2s ease,background .25s,box-shadow .25s;cursor:pointer}
+  .btn:hover{background:#D8BC80;transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(200,169,106,.5)}
+  .btn.ghost{background:transparent;color:var(--bone);border-color:var(--brass-dim)}
+  .btn.ghost:hover{background:var(--ink-2);box-shadow:none}
+  .btn.full{width:100%}
+  .btn svg{width:15px;height:15px}
+
+  section.blk{padding:clamp(3rem,7vw,5.5rem) 0;border-top:1px solid var(--hair)}
+  .blk h2{font-size:clamp(1.8rem,3.4vw,2.8rem);margin-bottom:1.4rem;max-width:22ch}
+  .lead-p{font-size:clamp(1.05rem,1.3vw,1.2rem);color:var(--bone-dim)}
+  .div-wave{display:block;width:100%;height:24px;opacity:.4;color:var(--brass)}
+
+  /* PLANS */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem;align-items:stretch}
+  .plan{border:1px solid var(--hair);border-radius:5px;background:var(--ink-2);padding:2rem 1.8rem;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+  .plan:hover{border-color:var(--brass-dim);transform:translateY(-4px)}
+  .plan.featured{border-color:var(--brass);background:linear-gradient(170deg,var(--ink-3),var(--ink-2));box-shadow:0 20px 50px -30px rgba(200,169,106,.5)}
+  .plan .ribbon{font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--brass);padding:.3rem .7rem;border-radius:20px;align-self:flex-start;margin-bottom:1.1rem}
+  .plan .pname{font-family:'Fraunces',serif;color:var(--bone);font-size:1.6rem;margin-bottom:.3rem}
+  .plan .pdesc{font-size:.92rem;color:var(--taupe);min-height:2.6em;margin-bottom:1.4rem}
+  .plan .price{display:flex;align-items:baseline;gap:.4rem;padding-bottom:1.4rem;margin-bottom:1.4rem;border-bottom:1px solid var(--hair)}
+  .plan .price .amt{font-family:'Fraunces',serif;color:var(--bone);font-size:2.8rem;line-height:1}
+  .plan .price .per{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--taupe);letter-spacing:.04em}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;flex:1;margin-bottom:1.8rem}
+  .plan li{display:flex;gap:.7rem;font-size:.95rem;color:var(--bone-dim);line-height:1.45}
+  .plan li svg{flex:0 0 auto;width:16px;height:16px;color:var(--brass);margin-top:.22rem}
+  .plan li.off{color:var(--taupe)}
+  .plan li.off svg{color:var(--hair)}
+  .ph{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--oxblood);border:1px dashed var(--oxblood);border-radius:2px;padding:.1rem .4rem;letter-spacing:.04em;vertical-align:middle}
+  .plans-note{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--taupe);letter-spacing:.03em;margin-top:1.8rem;text-align:center}
+
+  /* INSIDE */
+  .inside{background:var(--ink-2);border-top:1px solid var(--hair)}
+  .chan{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.6rem}
+  .chan .c{border:1px solid var(--hair);border-radius:3px;background:var(--ink);padding:1.5rem 1.4rem}
+  .chan .c svg{width:30px;height:30px;color:var(--brass);margin-bottom:.9rem}
+  .chan .c h4{font-family:'Fraunces',serif;color:var(--bone);font-size:1.15rem;font-weight:420;margin-bottom:.4rem}
+  .chan .c p{font-size:.9rem;color:var(--taupe);line-height:1.5}
+
+  /* FAQ */
+  .faq{margin-top:2.2rem;border-top:1px solid var(--hair)}
+  details{border-bottom:1px solid var(--hair)}
+  summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:'Fraunces',serif;color:var(--bone);font-size:1.12rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{color:var(--brass);font-family:'JetBrains Mono',monospace;transition:transform .25s;flex:0 0 auto}
+  details[open] summary .plus{transform:rotate(45deg)}
+  details p{padding:0 0 1.4rem;color:var(--taupe);font-size:.97rem;max-width:66ch}
+
+  footer{border-top:1px solid var(--hair);padding:2.6rem 0}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;align-items:center}
+  .foot p,.foot a{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--taupe)}
+  .foot a:hover{color:var(--bone)}
+  .foot-legal{margin-top:1.6rem;font-size:.74rem;color:var(--taupe);line-height:1.6;max-width:80ch}
+
+  .rev{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .rev.in{opacity:1;transform:none}
+  @media(max-width:880px){.plans{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}.chan{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rev{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <div class="mark">GIANMARCO <span>·</span> IL MULTIVERSO</div>
+    <a href="file:///C:/Users/marzo/Downloads/homepage-gianmarcomarzotto.html" class="bar-back">← Torna al sito</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-wave" id="heroWave" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+    <path id="wavePath" fill="none" stroke="var(--brass)" stroke-width="1.2" opacity="0.9" d="M0,300 L0.0,300.0 L8.0,308.8 L16.0,317.4 L24.0,325.8 L32.0,333.7 L40.0,341.1 L48.0,347.9 L56.0,353.9 L64.0,359.1 L72.0,363.3 L80.0,366.6 L88.0,368.8 L96.0,369.9 L104.0,369.9 L112.0,368.8 L120.0,366.6 L128.0,363.3 L136.0,359.1 L144.0,353.9 L152.0,347.9 L160.0,341.1 L168.0,333.7 L176.0,325.8 L184.0,317.4 L192.0,308.8 L200.0,300.0 L208.0,291.2 L216.0,282.6 L224.0,274.2 L232.0,266.3 L240.0,258.9 L248.0,252.1 L256.0,246.1 L264.0,240.9 L272.0,236.7 L280.0,233.4 L288.0,231.2 L296.0,230.1 L304.0,230.1 L312.0,231.2 L320.0,233.4 L328.0,236.7 L336.0,240.9 L344.0,246.1 L352.0,252.1 L360.0,258.9 L368.0,266.3 L376.0,274.2 L384.0,282.6 L392.0,291.2 L400.0,300.0 L408.0,308.8 L416.0,317.4 L424.0,325.8 L432.0,333.7 L440.0,341.1 L448.0,347.9 L456.0,353.9 L464.0,359.1 L472.0,363.3 L480.0,366.6 L488.0,368.8 L496.0,369.9 L504.0,369.9 L512.0,368.8 L520.0,366.6 L528.0,363.3 L536.0,359.1 L544.0,353.9 L552.0,347.9 L560.0,341.1 L568.0,333.7 L576.0,325.8 L584.0,317.4 L592.0,308.8 L600.0,300.0 L608.0,291.2 L616.0,282.6 L624.0,274.2 L632.0,266.3 L640.0,258.9 L648.0,252.1 L656.0,246.1 L664.0,240.9 L672.0,236.7 L680.0,233.4 L688.0,231.2 L696.0,230.1 L704.0,230.1 L712.0,231.2 L720.0,233.4 L728.0,236.7 L736.0,240.9 L744.0,246.1 L752.0,252.1 L760.0,258.9 L768.0,266.3 L776.0,274.2 L784.0,282.6 L792.0,291.2 L800.0,300.0 L808.0,308.8 L816.0,317.4 L824.0,325.8 L832.0,333.7 L840.0,341.1 L848.0,347.9 L856.0,353.9 L864.0,359.1 L872.0,363.3 L880.0,366.6 L888.0,368.8 L896.0,369.9 L904.0,369.9 L912.0,368.8 L920.0,366.6 L928.0,363.3 L936.0,359.1 L944.0,353.9 L952.0,347.9 L960.0,341.1 L968.0,333.7 L976.0,325.8 L984.0,317.4 L992.0,308.8 L1000.0,300.0 L1008.0,291.2 L1016.0,282.6 L1024.0,274.2 L1032.0,266.3 L1040.0,258.9 L1048.0,252.1 L1056.0,246.1 L1064.0,240.9 L1072.0,236.7 L1080.0,233.4 L1088.0,231.2 L1096.0,230.1 L1104.0,230.1 L1112.0,231.2 L1120.0,233.4 L1128.0,236.7 L1136.0,240.9 L1144.0,246.1 L1152.0,252.1 L1160.0,258.9 L1168.0,266.3 L1176.0,274.2 L1184.0,282.6 L1192.0,291.2 L1200.0,300.0" style="stroke-dasharray: 1505.79; stroke-dashoffset: 0; transition: stroke-dashoffset 2.6s cubic-bezier(0.16, 1, 0.3, 1);"></path>
+    <path id="wavePath2" fill="none" stroke="var(--brass-dim)" stroke-width="0.8" opacity="0.5" d="M0,300 L0.0,398.0 L8.0,401.9 L16.0,405.0 L24.0,407.4 L32.0,409.0 L40.0,409.9 L48.0,409.9 L56.0,409.3 L64.0,407.8 L72.0,405.6 L80.0,402.7 L88.0,399.0 L96.0,394.7 L104.0,389.6 L112.0,384.0 L120.0,377.7 L128.0,371.0 L136.0,363.7 L144.0,356.0 L152.0,347.8 L160.0,339.4 L168.0,330.6 L176.0,321.7 L184.0,312.6 L192.0,303.4 L200.0,294.2 L208.0,285.0 L216.0,276.0 L224.0,267.1 L232.0,258.4 L240.0,250.0 L248.0,242.0 L256.0,234.4 L264.0,227.2 L272.0,220.6 L280.0,214.5 L288.0,209.0 L296.0,204.1 L304.0,200.0 L312.0,196.5 L320.0,193.7 L328.0,191.7 L336.0,190.5 L344.0,190.0 L352.0,190.3 L360.0,191.4 L368.0,193.2 L376.0,195.8 L384.0,199.1 L392.0,203.1 L400.0,207.8 L408.0,213.1 L416.0,219.1 L424.0,225.6 L432.0,232.6 L440.0,240.1 L448.0,248.1 L456.0,256.4 L464.0,265.0 L472.0,273.8 L480.0,282.8 L488.0,292.0 L496.0,301.2 L504.0,310.4 L512.0,319.5 L520.0,328.5 L528.0,337.3 L536.0,345.8 L544.0,354.0 L552.0,361.9 L560.0,369.3 L568.0,376.2 L576.0,382.5 L584.0,388.3 L592.0,393.5 L600.0,398.0 L608.0,401.9 L616.0,405.0 L624.0,407.4 L632.0,409.0 L640.0,409.9 L648.0,409.9 L656.0,409.3 L664.0,407.8 L672.0,405.6 L680.0,402.7 L688.0,399.0 L696.0,394.7 L704.0,389.6 L712.0,384.0 L720.0,377.7 L728.0,371.0 L736.0,363.7 L744.0,356.0 L752.0,347.8 L760.0,339.4 L768.0,330.6 L776.0,321.7 L784.0,312.6 L792.0,303.4 L800.0,294.2 L808.0,285.0 L816.0,276.0 L824.0,267.1 L832.0,258.4 L840.0,250.0 L848.0,242.0 L856.0,234.4 L864.0,227.2 L872.0,220.6 L880.0,214.5 L888.0,209.0 L896.0,204.1 L904.0,200.0 L912.0,196.5 L920.0,193.7 L928.0,191.7 L936.0,190.5 L944.0,190.0 L952.0,190.3 L960.0,191.4 L968.0,193.2 L976.0,195.8 L984.0,199.1 L992.0,203.1 L1000.0,207.8 L1008.0,213.1 L1016.0,219.1 L1024.0,225.6 L1032.0,232.6 L1040.0,240.1 L1048.0,248.1 L1056.0,256.4 L1064.0,265.0 L1072.0,273.8 L1080.0,282.8 L1088.0,292.0 L1096.0,301.2 L1104.0,310.4 L1112.0,319.5 L1120.0,328.5 L1128.0,337.3 L1136.0,345.8 L1144.0,354.0 L1152.0,361.9 L1160.0,369.3 L1168.0,376.2 L1176.0,382.5 L1184.0,388.3 L1192.0,393.5 L1200.0,398.0" style="stroke-dasharray: 1629.52; stroke-dashoffset: 0; transition: stroke-dashoffset 2.6s cubic-bezier(0.16, 1, 0.3, 1);"></path>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow rev in">La community · Piani e abbonamenti</span>
+    <h1 class="rev in">Il Multiverso.</h1>
+    <p class="lede rev in">Il server dove seguo i mercati <strong>ogni giorno</strong>: live, analisi macro, formazione e confronto diretto. Scegli il livello di accesso più adatto a te — e resta accanto a un professionista mentre opera davvero.</p>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="plans">
+
+      <!-- ===== PIANO 1 ===== -->
+      <div class="plan rev in">
+        <div class="pname">Community <span class="ph">NOME</span></div>
+        <div class="pdesc">Per entrare nel vivo dei mercati e della community, giorno dopo giorno.</div>
+        <div class="price"><span class="amt">€ —</span><span class="per">/ mese <span class="ph">PREZZO</span></span></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Analisi dei grafici in diretta ogni giorno</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Aggiornamenti operativi e commenti sui mercati</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Accesso alla community e al confronto tra membri</li>
+          <li class="off"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5"></path></svg>Sezione deep: analisi macro &amp; ricerca</li>
+          <li class="off"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5"></path></svg>Percorso di formazione completo</li>
+        </ul>
+        <!-- PAGAMENTO: link checkout piano Community -->
+        <a href="file:///C:/Users/marzo/Downloads/multiverso-piani_1.html#" class="btn ghost full">Scegli Community</a>
+      </div>
+
+      <!-- ===== PIANO 2 (in evidenza) ===== -->
+      <div class="plan featured rev in">
+        <div class="ribbon">Il più scelto</div>
+        <div class="pname">Pro <span class="ph">NOME</span></div>
+        <div class="pdesc">Tutto il Multiverso, inclusa la ricerca macro e la formazione. Per chi vuole andare a fondo.</div>
+        <div class="price"><span class="amt">€ —</span><span class="per">/ mese <span class="ph">PREZZO</span></span></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Tutto ciò che include Community</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg><b style="color:var(--bone);font-weight:600">Sezione deep</b>: studio dei report e dati macro</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>I titoli che seguo, analizzati nel dettaglio</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Percorso di formazione con video lezioni e strategie</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Ricerca di nuove opportunità e stock picking</li>
+        </ul>
+        <!-- PAGAMENTO: link checkout piano Pro -->
+        <a href="file:///C:/Users/marzo/Downloads/multiverso-piani_1.html#" class="btn full">Scegli Pro</a>
+      </div>
+
+      <!-- ===== PIANO 3 ===== -->
+      <div class="plan rev in">
+        <div class="pname">Annuale <span class="ph">NOME</span></div>
+        <div class="pdesc">Il massimo del valore: tutto il piano Pro, con la formula annuale.</div>
+        <div class="price"><span class="amt">€ —</span><span class="per">/ anno <span class="ph">PREZZO</span></span></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Tutto ciò che include Pro</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Formula annuale — <span class="ph">RISPARMIO %</span> rispetto al mensile</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Prezzo bloccato per 12 mesi</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.6"></path></svg>Accesso prioritario a novità e nuovi contenuti</li>
+        </ul>
+        <!-- PAGAMENTO: link checkout piano Annuale -->
+        <a href="file:///C:/Users/marzo/Downloads/multiverso-piani_1.html#" class="btn ghost full">Scegli Annuale</a>
+      </div>
+
+    </div>
+    <p class="plans-note rev in">// Nomi, prezzi e link di pagamento sono placeholder: da completare con i dati reali dei tuoi abbonamenti.</p>
+  </div>
+</section>
+
+<svg class="div-wave wrap" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C100,4 200,4 300,20 C400,36 500,36 600,20 C700,4 800,4 900,20 C1000,36 1100,36 1200,20" fill="none" stroke="currentColor" stroke-width="1"></path></svg>
+
+<!-- INSIDE -->
+<section class="blk inside">
+  <div class="wrap">
+    <span class="eyebrow rev">Cosa c'è dentro</span>
+    <h2 class="rev">Non un gruppo segnali. Un ambiente di lavoro.</h2>
+    <p class="lead-p measure rev">Ogni area del Multiverso ha uno scopo preciso: dall'operatività quotidiana alla ricerca, dalla formazione al confronto diretto.</p>
+    <div class="chan">
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><path d="M4 20l7-8 5 5 8-10" stroke="currentColor" stroke-width="1.8"></path><circle cx="24" cy="7" r="2" fill="currentColor"></circle></svg><h4>Live &amp; operatività</h4><p>Analisi dei grafici in diretta e condivisione operativa, ogni giorno.</p></div>
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="2" stroke="currentColor" stroke-width="1.6"></rect><path d="M9 20l4-5 3 3 5-7" stroke="currentColor" stroke-width="1.6"></path></svg><h4>Analisi macro &amp; ricerca</h4><p>La sezione deep: report, dati macroeconomici e i titoli seguiti.</p></div>
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><path d="M6 8h20v13H6z" stroke="currentColor" stroke-width="1.6"></path><path d="M13 14l5 3-5 3z" fill="currentColor"></path></svg><h4>Formazione</h4><p>Video lezioni e strategie operative per mettere in pratica il metodo.</p></div>
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><path d="M16 6a5 5 0 015 5v4a5 5 0 01-10 0v-4a5 5 0 015-5z" stroke="currentColor" stroke-width="1.6"></path><path d="M8 15a8 8 0 0016 0M16 23v3" stroke="currentColor" stroke-width="1.6"></path></svg><h4>Aggiornamenti &amp; podcast</h4><p>Commenti frequenti e aggiornamenti operativi, sempre sul pezzo.</p></div>
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"></circle><circle cx="21" cy="14" r="3" stroke="currentColor" stroke-width="1.6"></circle><path d="M5 25c0-4 3-6 7-6s7 2 7 6M18 25c0-3 2-4.5 5-4.5" stroke="currentColor" stroke-width="1.6"></path></svg><h4>Community &amp; confronto</h4><p>Un gruppo che fa sul serio, dove confrontarsi con me e gli altri.</p></div>
+      <div class="c rev"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="currentColor" stroke-width="1.5"></path></svg><h4>Nuove opportunità</h4><p>Stock picking, startup e idee: la parte più esplorativa del portafoglio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="blk">
+  <div class="wrap">
+    <span class="eyebrow rev">Domande frequenti</span>
+    <h2 class="rev">Prima di scegliere.</h2>
+    <div class="faq rev">
+      <details><summary>Come funziona l'abbonamento? <span class="plus">+</span></summary><p>L'accesso al Multiverso è su abbonamento ricorrente. Una volta iscritto, entri subito nel server con tutte le aree previste dal tuo piano. <span class="ph">Dettagli su rinnovo e attivazione da confermare.</span></p></details>
+      <details><summary>Posso disdire quando voglio? <span class="plus">+</span></summary><p><span class="ph">Da completare</span> con le condizioni reali di disdetta e rinnovo dei tuoi piani. In genere l'abbonamento mensile è disdicibile prima del rinnovo successivo.</p></details>
+      <details><summary>Qual è la differenza tra i piani? <span class="plus">+</span></summary><p>Il piano base dà accesso alle live quotidiane, agli aggiornamenti operativi e alla community. Il piano Pro aggiunge la sezione deep di analisi macro e ricerca, i titoli seguiti nel dettaglio e la formazione completa. La formula annuale è il piano Pro con il miglior rapporto qualità-prezzo.</p></details>
+      <details><summary>Il coaching 1:1 è incluso? <span class="plus">+</span></summary><p>No. Il coaching 1:1 è un percorso a parte, personalizzato e su candidatura, con un affiancamento diretto e dedicato. Il Multiverso è la community; il coaching è il lavoro individuale con me. <a href="https://marzottogianmarco.github.io/ADVISORY1TO1/" style="color:var(--brass)">Scopri il coaching →</a></p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <p style="color:var(--bone)">GIANMARCO MARZOTTO · IL MULTIVERSO</p>
+      <div>
+        <a href="file:///C:/Users/marzo/Downloads/homepage-gianmarcomarzotto.html">Sito</a> &nbsp;·&nbsp;
+        <a href="https://marzottogianmarco.github.io/ADVISORY1TO1/">Coaching 1:1</a>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 EVOFIN GROWTH PARTNERS L.L.C.-FZ — Dubai, UAE · TRN: 104418901500001<br>
+    Disclaimer: il trading e l'investimento comportano rischi. I risultati passati non sono indicativi dei risultati futuri. I contenuti del Multiverso hanno finalità formativa e informativa e non costituiscono consulenza finanziaria personalizzata.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var w=1200; function build(cy,amp,periods,phase){var d='M0,'+cy,step=8;for(var x=0;x<=w;x+=step){var y=cy+amp*Math.sin((x/w)*Math.PI*2*periods+phase);d+=' L'+x.toFixed(1)+','+y.toFixed(1);}return d;}
+    var p1=document.getElementById('wavePath'),p2=document.getElementById('wavePath2');
+    if(p1)p1.setAttribute('d',build(300,70,3,0));
+    if(p2)p2.setAttribute('d',build(300,110,2,1.1));
+    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    [p1,p2].forEach(function(p){if(!p||reduce)return;var len=p.getTotalLength();p.style.strokeDasharray=len;p.style.strokeDashoffset=len;p.style.transition='stroke-dashoffset 2.6s cubic-bezier(.16,1,.3,1)';requestAnimationFrame(function(){requestAnimationFrame(function(){p.style.strokeDashoffset=0;});});});
+  })();
+  (function(){
+    var els=document.querySelectorAll('.rev');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:0.1});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+
+
+</body></html>
